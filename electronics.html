@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Electronics - SHOPNOW</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="cart.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <h1 class="logo">Electronics Collection</h1>
+    <nav class="navbar">
+      <a href="index.html">← Back to Home</a>
+       <a href="viewcart.html">🛒 View Cart</a>
+    </nav>
+  </header>
+
+  <section class="product-list">
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/tv.JPEG" alt="TV">
+        <p>Smart LED TV - ₹20,000</p>
+        <button onclick="addToCart('Smart LED TV', 20000)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/fridge.JPEG" alt="Fridge">
+        <p>Double Door Fridge - ₹18,000</p>
+        <button onclick="addToCart('Double Door Fridge', 18000)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/microwave.JPEG" alt="Microwave">
+        <p>Microwave Oven - ₹5,500</p>
+        <button onclick="addToCart('Microwave Oven', 5500)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/laptop.JPEG" alt="Laptop">
+        <p>Laptop - ₹45,000</p>
+        <button onclick="addToCart('Laptop', 45000)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/speaker.JPEG" alt="Speaker">
+        <p>Bluetooth Speaker - ₹2,500</p>
+        <button onclick="addToCart('Bluetooth Speaker', 2500)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

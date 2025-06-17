@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mobiles - SHOPNOW</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="cart.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <h1 class="logo">Mobiles Collection</h1>
+    <nav class="navbar">
+      <a href="index.html">← Back to Home</a>
+      <a href="viewcart.html">🛒 View Cart</a>
+    </nav>
+  </header>
+
+  <section class="product-list">
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/iphone.JPEG" alt="iPhone">
+        <p>iPhone 14 - ₹70,000</p>
+        <button onclick="addToCart('iPhone 14', 70000)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/samsung.JPEG" alt="Samsung">
+        <p>Samsung Galaxy S21 - ₹50,000</p>
+        <button onclick="addToCart('Samsung Galaxy S21', 50000)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/oneplus.JPEG" alt="OnePlus">
+        <p>OnePlus 11 - ₹55,000</p>
+        <button onclick="addToCart('OnePlus 11', 55000)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/realme.JPEG" alt="Realme">
+        <p>Realme 10 Pro - ₹20,000</p>
+        <button onclick="addToCart('Realme 10 Pro', 20000)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="images/redmi.JPEG" alt="Redmi">
+        <p>Redmi Note 12 - ₹15,000</p>
+        <button onclick="addToCart('Redmi Note 12', 15000)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SoShop NOW - Your Dream Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="logo-container">
+      <h1 class="logo">SoShop NOW</h1>
+      <p class="slogan">🚀 We’re Launching Soon! Here Dream Comes Alive!</p>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#products">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#hiring">Hiring</a></li>
+        <li><a href="#comingsoon">Coming Soon</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="viewcart.html">🛒 View Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hiring" class="hiring-banner">
+    <h2>🚀 We Are Hiring!</h2>
+    <p>Join us as a Sales Officer and grow your career with SoShop NOW.</p>
+    <a href="apply.html" class="btn-join">Apply Now</a>
+
+  </section>
+
+  <section id="products">
+    <h2>🛒 Our Products</h2>
+    <div class="product-grid">
+      <div class="product-card" onclick="location.href='furniture.html'">
+        <div class="product-icon">🪑</div>
+        <h3>Furniture</h3>
+      </div>
+      <div class="product-card" onclick="location.href='electronics.html'">
+        <div class="product-icon">💻</div>
+        <h3>Electronics</h3>
+      </div>
+      <div class="product-card" onclick="location.href='mobile.html'">
+        <div class="product-icon">📱</div>
+        <h3>Mobile</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="comingsoon" class="coming-soon">
+    <h2>🚧 Coming Soon...</h2>
+    <p class="blink">New Products Launching Soon!</p>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Developers</h2>
+    <p>We are a passionate team behind SoShop NOW, working to bring your dream shopping experience to life.</p>
+  </section>
+
+  <section id="video" class="video">
+    <h2>📽️ Our Promo</h2>
+    <video id="promoVideo" width="640" height="360" controls autoplay muted loop>
+      <source src="promo-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p class="video-caption">Here’s a glimpse into the culture that powers SHOPNOW! 💛</p>
+  </section>
+
+  <footer id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: contact@shopnow.com</p>
+    <p>Phone: +91-9876543210</p>
+    <p>&copy; 2025 SHOPNOW. All rights reserved.</p>
+  </footer>
+
+  <script>
+    ScrollReveal().reveal('.logo', {
+      delay: 200,
+      origin: 'left',
+      distance: '60px',
+      duration: 1000,
+      easing: 'ease-in-out'
+    });
+
+    ScrollReveal().reveal('.slogan', {
+      delay: 300,
+      origin: 'right',
+      distance: '60px',
+      duration: 1000,
+      easing: 'ease-in-out'
+    });
+
+    ScrollReveal().reveal('.navbar ul li', {
+      interval: 100,
+      origin: 'bottom',
+      distance: '20px',
+      duration: 800,
+      easing: 'ease-out'
+    });
+
+    ScrollReveal().reveal('.product-card', {
+      interval: 150,
+      origin: 'bottom',
+      distance: '30px',
+      duration: 900,
+      scale: 0.95,
+      easing: 'ease-out'
+    });
+
+    ScrollReveal().reveal('.hiring-banner', {
+      delay: 200,
+      origin: 'left',
+      distance: '50px',
+      duration: 1000
+    });
+
+    ScrollReveal().reveal('.coming-soon', {
+      delay: 200,
+      origin: 'right',
+      distance: '50px',
+      duration: 1000
+    });
+
+    ScrollReveal().reveal('.about, .video, footer', {
+      delay: 200,
+      origin: 'bottom',
+      distance: '40px',
+      duration: 1000
+    });
+
+    const promoVideo = document.getElementById("promoVideo");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          promoVideo.play();
+        } else {
+          promoVideo.pause();
+        }
+      });
+    }, { threshold: 0.5 });
+
+    observer.observe(promoVideo);
+  </script>
+</body>
+</html>

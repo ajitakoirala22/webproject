@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Cart - SHOPNOW</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="cart.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <h1 class="logo">Your Cart</h1>
+    <nav class="navbar">
+      <a href="index.html">← Back to Home</a>
+    </nav>
+  </header>
+
+  <section class="cart">
+    <h2>🛒 Items in Your Cart</h2>
+
+    <!-- Product Count -->
+    <p id="product-count">Total Products: 0</p>
+
+    <!-- Cart Items -->
+    <ul id="cart-items"></ul>
+
+    <!-- Total Price -->
+    <h3 id="total">Total: ₹0</h3>
+
+    <!-- Contact & Address Form -->
+    <form id="order-form" onsubmit="handleOrder(event)">
+      <h3>📋 Contact & Address Details</h3>
+
+      <label for="name">Full Name:</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="address">Delivery Address:</label><br />
+      <textarea id="address" name="address" rows="4" required></textarea><br /><br />
+
+      <button type="submit">Place Order</button>
+    </form>
+
+    <!-- Support Info -->
+    <p style="margin-top: 20px;">
+      📧 For any queries, contact us at 
+      <a href="mailto:support@shopnow.com">support@shopnow.com</a>
+    </p>
+  </section>
+
+  <script>
+    function handleOrder(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const address = document.getElementById('address').value;
+
+      if (!name || !email || !address) {
+        alert("Please fill all fields before placing your order.");
+        return;
+      }
+
+      alert(`Thank you ${name}! Your order has been placed.\nWe’ll reach out at ${email}.`);
+      localStorage.removeItem('cart');
+      location.reload();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Furniture - SHOPNOW</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="cart.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <h1 class="logo">Furniture Collection</h1>
+    <nav class="navbar">
+      <a href="index.html">← Back to Home</a>
+      <a href="viewcart.html">🛒 View Cart</a>
+    </nav>
+  </header>
+
+  <section class="product-list">
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/sofa.JPEG" alt="Sofa">
+        <p>Sofa - ₹10,000</p>
+        <button onclick="addToCart('Sofa', 10000)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/bed.JPEG" alt="Bed">
+        <p>Bed - ₹15,000</p>
+        <button onclick="addToCart('Bed', 15000)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/table.JPEG" alt="Table">
+        <p>Table - ₹5,000</p>
+        <button onclick="addToCart('Table', 5000)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/wardrobe.JPEG" alt="Wardrobe">
+        <p>Wardrobe - ₹12,000</p>
+        <button onclick="addToCart('Wardrobe', 12000)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/chair.JPEG" alt="Chair">
+        <p>Chair - ₹2,500</p>
+        <button onclick="addToCart('Chair', 2500)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
